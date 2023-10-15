@@ -1,0 +1,22 @@
+@import '../../styles/helpers/variables';
+
+.search {
+    &-input {
+        border: 1px solid black;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        width: 50%;
+        margin: 0.25em;
+        font-size: 1em;
+    }
+
+    &-button {
+        border: 1px solid black;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        margin: 0.25em;
+        font-size: 1em;
+        color: $-color;
+
+    }
+}

@@ -1,0 +1,38 @@
+@use '../../styles/main';
+@import '../../styles/helpers/variables';
+
+header {
+    @extend %main;
+    max-height: 12rem;
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.5em;
+    text-wrap: nowrap;
+    color: $tertiary-color;
+    display: flex;
+    flex-direction: row;
+    padding: 0.25em;
+
+    .logo-icon {
+        font-size: 1.3em;
+        align-self: center;
+    }
+
+    .logo-text-mini {
+        color: $primary-color;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .logo-text-reddit {
+        color: $tertiary-color;
+        align-self: center;
+        justify-self: center;
+    }
+}

@@ -1,0 +1,22 @@
+/* Typography */
+$primary-font: 'Nunito', sans-serif;
+$secondary-font: 'Lora', serif;
+
+/* Colors */
+$primary-color: #FF4500;
+$secondary-color: #1A1A1A;
+$tertiary-color: #0079D3;
+$accent-color: #FFA500;
+$white: #FFFFFF;
+$black: #000000;
+
+// Path: src/styles/helpers/_mixins.scss
+// Compare this snippet from src/components/Header/Header.scss:
+// @use '../../styles/main';
+//
+// header {
+//     max-height: 12rem;
+//     border: 1px solid black;
+//     width: 100%;
+//     @include main;
+// }

@@ -1,0 +1,9 @@
+@use '../../styles/main.scss';
+
+header {
+    @extend %main;
+    max-height: 12rem;
+    border: 1px solid black;
+    width: 100%;
+
+}
