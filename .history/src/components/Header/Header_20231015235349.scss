@@ -1,0 +1,47 @@
+@use '../../styles/main';
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+header {
+    @extend %headings;
+    max-height: 12rem;
+    border-bottom: 1px solid black;
+    width: 100%;
+    @include shadow-elevation-low($hue: 0deg, $saturation: 0%, $lightness: 50%, $opacity: 0.9);
+    @include shadow-elevation-medium($hue: 0deg, $saturation: 0%, $lightness: 50%, $opacity: 0.3);
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    padding-top: 0.3em;
+    text-shadow: 0.5px 0.5px 0.8px hsla(0, 0%, 0%, 0.4),
+        0.9px 0.9px 1.4px -1.2px hsla(0, 0%, 0%, 0.4),
+        2.2px 2.2px 3.5px -2.5px hsla(0, 0%, 0%, 0.4);
+
+    .logo-icon {
+        text-decoration: none;
+        font-size: 1.5em;
+        text-wrap: nowrap;
+        color: $tertiary-color;
+        display: flex;
+        flex-direction: row;
+        padding: 0.25em;
+
+    }
+    .logo-text-mini {
+        color: $primary-color;
+        align-self: center;
+        justify-self: center;
+        margin-top: 0.1em;
+    }
+
+    .logo-text-reddit {
+        color: $tertiary-color;
+        align-self: center;
+        justify-self: center;
+        margin-top: 0.1em;
+    }
+}

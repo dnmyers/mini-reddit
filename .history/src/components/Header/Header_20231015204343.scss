@@ -1,0 +1,46 @@
+@use '../../styles/main';
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+header {
+    @extend %headings;
+    max-height: 12rem;
+    border: 1px solid black;
+    width: 100%;
+    // box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
+    // @include shadow-elevation-low($hue: '200deg', $saturation: '50%', $lightness: '0%', $opacity: 0.42);
+    // @include shadow-elevation-medium('200deg', '0%', '0%', 0.39);
+    // @include shadow-elevation-high('200deg', '50%', '70%', 0.3);
+
+    @include card(3);
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+
+    .logo-icon {
+        text-decoration: none;
+        font-size: 1.5em;
+        text-wrap: nowrap;
+        color: $tertiary-color;
+        display: flex;
+        flex-direction: row;
+        padding: 0.25em;
+
+    }
+    .logo-text-mini {
+        color: $primary-color;
+        align-self: center;
+        justify-self: center;
+        margin-top: 0.2em;
+    }
+
+    .logo-text-reddit {
+        color: $tertiary-color;
+        align-self: center;
+        justify-self: center;
+    }
+}

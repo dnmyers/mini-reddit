@@ -1,0 +1,99 @@
+// ---------------------------------------------------------------- */
+//                  Shadows                                         */
+// ---------------------------------------------------------------- */
+// These mixin's are used to set the shadow color of an element.
+// They take three parameters: hue, saturation, and lightness.
+// The color is generated using the hsl() function.
+/// @param {Number} $hue - hue value (between 0 and 360)
+/// @param {Number} $saturation - saturation value (between 0 and 100)
+/// @param {Number} $lightness - lightness value (between 0 and 100)
+/// @return {List}
+///
+///
+@mixin shadow-elevation-low($hue: '206deg', $saturation: '100%', $lightness: '21%', $opacity: 0.4) {
+    $shadow-color: $hue $saturation $lightness;
+    $shadow-opacity: $opacity;
+    box-shadow: 0.5px 0.5px 0.8px hsl($shadow-color / $shadow-opacity),
+        0.9px 0.9px 1.4px -1.2px hsl($shadow-color / $shadow-opacity),
+        2.2px 2.2px 3.5px -2.5px hsl($shadow-color / $shadow-opacity);
+}
+
+@mixin shadow-elevation-medium($hue: '206deg', $saturation: '100%', $lightness: '21%', $opacity: 0.42) {
+    $shadow-color: $hue $saturation $lightness;
+    $shadow-opacity: $opacity;
+    box-shadow: 0.5px 0.5px 0.8px hsl($shadow-color / $shadow-opacity),
+        1.7px 1.8px 2.8px -0.8px hsl($shadow-color / $shadow-opacity),
+        4.4px 4.5px 7.1px -1.7px hsl($shadow-color / $shadow-opacity),
+        10.8px 11px 17.3px -2.5px hsl($shadow-color / $shadow-opacity);
+}
+
+@mixin shadow-elevation-high($hue: '206deg', $saturation: '100%', $lightness: '21%', $opacity: 0.45) {
+    $shadow-color: $hue $saturation $lightness;
+    $shadow-opacity: $opacity;
+    box-shadow: 0.5px 0.5px 0.8px hsl($shadow-color / $shadow-opacity),
+        3.8px 3.8px 6px -0.4px hsl($shadow-color / $shadow-opacity),
+        7.4px 7.5px 11.9px -0.8px hsl($shadow-color / $shadow-opacity),
+        13.1px 13.3px 21px -1.2px hsl($shadow-color / $shadow-opacity),
+        22.3px 22.7px 35.8px -1.7px hsl($shadow-color / $shadow-opacity),
+        36.7px 37.3px 58.9px -2.1px hsl($shadow-color / $shadow-opacity),
+        57.9px 58.9px 92.9px -2.5px hsl($shadow-color / $shadow-opacity);
+}
+// @mixin shadow-elevation-low($hue: '0deg', $saturation: '0%', $lightness: '0%') {
+//     box-shadow: 0px 1px 1.5px hsl($hue $saturation calc($lightness / 0.01)),
+//         0px 2.1px 3.2px hsl($hue $saturation calc($lightness / 0.29)),
+//         0px 4.5px 6.8px hsl($hue $saturation calc($lightness / 0.58));
+// }
+
+// @mixin shadow-elevation-medium($hue: '0deg', $saturation: '0%', $lightness: '0%') {
+//     box-shadow: 0px 1px 1.5px hsl($hue $saturation calc($lightness / 0.01)),
+//         -0.1px 5.4px 8.1px hsl($hue $saturation calc($lightness / 0.23)),
+//         -0.1px 11px 16.5px hsl($hue $saturation calc($lightness / 0.45)),
+//         -0.2px 22.5px 33.8px hsl($hue $saturation calc($lightness / 0.68));
+// }
+
+// @mixin shadow-elevation-high($hue: '0deg', $saturation: '0%', $lightness: '0%') {
+//     box-shadow: 0px 1px 1.5px hsl($hue $saturation calc($lightness / 0.01)),
+//         -0.1px 14.5px 21.8px hsl($hue $saturation calc($lightness / 0.14)),
+//         -0.3px 26.3px 39.5px hsl($hue $saturation calc($lightness / 0.28)),
+//         -0.4px 39.8px 59.7px hsl($hue $saturation calc($lightness / 0.41)),
+//         -0.6px 58.4px 87.6px hsl($hue $saturation calc($lightness / 0.55)),
+//         -0.9px 85.7px 128.6px hsl($hue $saturation calc($lightness / 0.69)),
+//         -1.2px 125px 187.5px hsl($hue $saturation calc($lightness / 0.83));
+// }
+
+// ---------------------------------------------------------------- */
+//                  Card                                            */
+// ---------------------------------------------------------------- */
+/// Gives a card depth effect.
+/// @param {Number} $depth - depth level (between 1 and 5)
+/// @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+/// @requires {function} top-shadow
+/// @requires {function} bottom-shadow
+@mixin card($depth) {
+    $max-depth: 5;
+    $min-depth: 1;
+    background-color: lighten($backgroundColor, 15%);
+
+    @if $depth < $min-depth {
+        box-shadow: none;
+    }
+
+    @else if $depth>$max-depth {
+        @warn "Invalid $depth `#{$depth}` for mixin `card`.";
+    }
+
+    @else {
+        box-shadow: bottom-shadow($depth), top-shadow($depth);
+    }
+}
+
+// A mixin to set the top and bottom margins to the same value
+@mixin marginY($value) {
+    @if unitless($value) {
+        @warn "Assuming #{$value} to be in ems.";
+        $value: $value * 1em;
+    }
+
+    margin-top: $value;
+    margin-bottom: $value;
+}
