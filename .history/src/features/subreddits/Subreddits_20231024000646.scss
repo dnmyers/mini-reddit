@@ -1,0 +1,64 @@
+@use '../../styles/main';
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.subreddits-container {
+    @include shadow-elevation-low(0, 4%, 8%, 0.5);
+    border: 1px solid lighten($black, 80%);
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+
+    h3 {
+        padding-top: 2em;
+    }
+
+    .subreddits-row {
+        display: flex;
+        flex-direction: row;
+        font-size: 0.5em;
+        cursor: pointer;
+        overflow: scroll;
+
+        .subreddit {
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            align-items: center;
+            margin-right: 2em;
+
+            &__name {
+                @include marginY(1.5em);
+                font-size: 0.5em;
+                font-weight: 700;
+            }
+
+            &__icon {
+                max-width: 5em;
+            }
+        }
+    }
+
+    .subreddits-column {
+        .subreddit {
+            // display: flex;
+            // flex-direction: column;
+            // flex-wrap: wrap;
+            // align-self: center;
+            // align-items: center;
+            margin-bottom: 1em;
+
+            &__name {
+                @include marginY(1em);
+                font-size: 0.5em;
+                font-weight: 700;
+            }
+
+            &__icon {
+                max-width: 3em;
+            }
+        }
+    }
+}

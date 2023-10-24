@@ -1,0 +1,46 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/main';
+
+.post {
+    @include card(2);
+    background-color: $white;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: $box-shadow-hover;
+    }
+
+    .post__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .post__body {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .post__author {
+        font-size: 0.875rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    .post__date {
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+
+    .post__comments {
+        font-size: 0.875rem;
+        font-weight: 400;
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+    }
+}

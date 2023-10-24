@@ -1,0 +1,75 @@
+@use '../../styles/main';
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.subreddits-container {
+    @include shadow-elevation-low(0, 4%, 8%, 0.5);
+    border: 1px solid lighten($black, 80%);
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+
+    h3 {
+        padding-top: 2em;
+    }
+
+    .subreddits {
+        display: flex;
+        flex-direction: row;
+        font-size: 0.5em;
+        cursor: pointer;
+        overflow: scroll;
+
+        .subreddit {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-self: center;
+            align-items: center;
+            margin-right: 2em;
+
+            &__name {
+                @include marginY(1em);
+                font-size: 0.5em;
+                font-weight: 700;
+            }
+
+            &__icon {
+                max-width: 5em;
+            }
+        }
+
+
+        // .subreddit {
+        //     @include shadow-elevation-low(0, 4%, 8%, 0.5);
+        //     border: 1px solid lighten($black, 80%);
+        //     margin: 1rem;
+        //     padding: 1rem;
+        //     border-radius: 15px;
+        //     display: flex;
+        //     flex-direction: column;
+        //     align-items: center;
+        //     justify-content: center;
+        //     transition: all 0.3s ease-in-out;
+        //     cursor: pointer;
+
+        //     &:hover {
+        //         @include shadow-elevation-medium(0, 4%, 8%, 0.3);
+        //     }
+
+        //     &__name {
+        //         // font-size: 1.5rem;
+        //         font-weight: 700;
+        //         margin-bottom: 1rem;
+        //     }
+
+        //     &__icon {
+        //         font-size: 3rem;
+        //         margin-bottom: 1rem;
+        //     }
+        // }
+    }
+}

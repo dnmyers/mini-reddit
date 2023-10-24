@@ -1,0 +1,93 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/main';
+
+.post {
+    @include shadow-elevation-low(0, 4%, 8%, 0.5);
+    border: 1px solid lighten($black, 80%);
+    background-color: $white;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+
+    &__votes {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 1.5rem;
+        position: relative;
+
+        &__count {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: absolute;
+            top: 2.5rem;
+            left: 0;
+        }
+
+        &__icon__up {
+            // color: $primary-color;
+            font-size: 1.5rem;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+        &__icon__down {
+            // color: $primary-color;
+            // font-size: 1.5rem;
+            position: absolute;
+            top: 4.5rem;
+            left: 1rem;
+        }
+    }
+
+    &:hover {
+        @include shadow-elevation-medium(0, 4%, 8%, 0.3);
+    }
+
+    &__main{
+
+        &__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        &__body {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+
+        &__date {
+            font-size: 0.875rem;
+            font-weight: 400;
+        }
+
+        &__footer {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+
+            &__author {
+                font-size: 0.875rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+            }
+
+            &__comments {
+                font-size: 0.875rem;
+                font-weight: 400;
+                position: absolute;
+                right: 1.5rem;
+                top: 1.5rem;
+            }
+        }
+    }
+}
