@@ -1,0 +1,53 @@
+@use '../../styles/main';
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+header {
+    @extend %headings;
+    // @include shadow-elevation-low($hue: 100deg, $saturation: 0%, $lightness: 50%, $opacity: 0.5);
+    @include shadow-elevation-medium($hue: 0deg, $saturation: 0%, $lightness: 50%, $opacity: 0.3);
+    max-height: 10rem;
+    border-bottom: 1px solid black;
+    width: 104%;
+    margin-left: -2%;
+    z-index: -999;
+    background-color: transparent;
+}
+
+.logo {
+    display: flex;
+    justify-content: left;
+    padding-top: 0.1em;
+    position: relative;
+    background-color: transparent;
+
+    .logo-icon {
+        font-size: 1.3em;
+        color: $tertiary-color;
+        padding: 0.25em;
+        z-index: 999;
+    }
+
+    .logo-icon-2 {
+        font-size: 1.3em;
+        position: absolute;
+        top: 0.32em;
+        left: 0.22em;
+        z-index: 0;
+        color: $primary-color;
+    }
+
+    .logo-text-mini {
+        color: $primary-color;
+        align-self: center;
+        margin-top: 0.1em;
+        text-shadow: -0.5px -1px 2px $tertiary-color;
+    }
+
+    .logo-text-reddit {
+        color: $tertiary-color;
+        align-self: center;
+        margin-top: 0.1em;
+        text-shadow: -0.5px -1px 2px $primary-color;
+    }
+}

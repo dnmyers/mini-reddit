@@ -1,0 +1,10 @@
+@use './helpers/variables';
+@use './helpers/functions';
+@use './helpers/mixins';
+@use './helpers/placeholders';
+
+// Components
+// @import '../components/Header/Header';
+@import '../features/posts/Posts';
+@import '../components/Search/Search';
+@import '../App/App';

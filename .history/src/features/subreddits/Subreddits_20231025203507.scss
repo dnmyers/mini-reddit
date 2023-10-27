@@ -1,0 +1,74 @@
+@use '../../styles/main';
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.subreddits-container {
+    @include shadow-elevation-low(0, 4%, 8%, 0.5);
+    @include shadow-elevation-medium(0, 4%, 8%, 0.3);
+    border: 1px solid lighten($black, 80%);
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+
+    button {
+        @include marginY(0.5em);
+        border: none;
+        background-color: $white;
+        font-size: 1em;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    h3 {
+        @include paddingY(0.5em);
+    }
+
+    .subreddits-row {
+        cursor: pointer;
+        overflow: scroll;
+        margin-top: 1em;
+
+        .subreddit {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            align-items: center;
+            margin-right: 0.875em;
+
+            &__name {
+                @include marginY(1.5em);
+                font-size: 0.7em;
+                font-weight: 700;
+            }
+
+            &__icon {
+                font-size: 0.35em;
+                max-width: 5em;
+            }
+        }
+    }
+
+    .subreddits-column {
+        .subreddit {
+            display: flex;
+            flex-direction: row;
+            // align-self: center;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 0.5em;
+
+            &__name {
+                @include marginY(1em);
+                font-size: 0.5em;
+                font-weight: 700;
+                margin-left: 0.875em;
+            }
+
+            &__icon {
+                max-width: 3em;
+            }
+        }
+    }
+}

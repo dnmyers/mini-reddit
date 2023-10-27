@@ -1,0 +1,9 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.posts-container {
+    .loading {
+        @include marginY(2em);
+        text-align: center;
+    }
+}
