@@ -1,0 +1,6 @@
+.comments-header {
+    @include paddingY(1rem);
+    border-top: 1px solid black;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
