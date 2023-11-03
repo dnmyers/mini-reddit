@@ -1,0 +1,5 @@
+@use '../styles/main';
+
+.App {
+    @extend %scrollbars;
+}

@@ -1,0 +1,6 @@
+@use '../styles/helpers/placeholders';
+
+.App {
+    @extend %scrollbars;
+    overflow-y: scroll;
+}

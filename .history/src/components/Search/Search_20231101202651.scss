@@ -1,0 +1,29 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.search {
+    &-input {
+        @include marginY(0.8);
+        @include paddingY(0.35);
+        background-color: lighten($black, 95%);
+        border: 1px solid lighten($black, 90%);
+        border-radius: 0.5em;
+        text-align: center;
+        width: 50%;
+        font-size: 0.7em;
+    }
+
+    &-button {
+        border: none;
+        // padding: 0.5em;
+        padding-left: 0.5em;
+        padding-top: 0.5em;
+        font-size: 1em;
+        color: lighten($black, 20%);
+        background-color: transparent;
+
+        &-icon {
+            font-size: 0.7em;
+        }
+    }
+}
