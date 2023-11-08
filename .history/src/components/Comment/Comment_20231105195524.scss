@@ -1,0 +1,25 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.comment-container {
+    @include paddingY(0.5em);
+    line-height: 0.5em;
+
+    &-votes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__icon__up {
+            cursor: pointer;
+            color: $black;
+            font-size: 1.5em !important;
+        }
+
+        &__icon__down {
+            cursor: pointer;
+            color: $black;
+        }
+    }
+
+}

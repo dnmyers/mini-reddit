@@ -1,0 +1,15 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.posts-container {
+    .loading {
+        @include marginX(25em);
+        @include marginY(2em);
+        text-align: center;
+    }
+
+    .error {
+        @include marginY(2em);
+        text-align: center;
+    }
+}

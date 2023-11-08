@@ -1,0 +1,51 @@
+@import './styles/helpers/variables';
+
+*,
+*::before,
+*::after,
+#root,
+body {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button, textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: $primary-font;
+    // font-size: 16px;
+}

@@ -1,0 +1,69 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.comment-container {
+    @include paddingY(0.5em);
+
+    .comment-votes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+// .comment-container {
+//     .votes {
+//         &__icon__up {
+//             cursor: pointer;
+//             color: $black;
+//         }
+
+//         &__icon__down {
+//             cursor: pointer;
+//             position: absolute;
+//             top: 1.5em;
+//             left: 0.5em;
+//         }
+//     }
+// }
+
+// .comment-list-item {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     justify-content: flex-start;
+//     padding: 1rem;
+//     border-top: 1px solid #ccc;
+//     margin-bottom: 1rem;
+//     width: 100%;
+
+//     .comment-container{
+//         // display: flex;
+//         // flex-direction: row;
+//         // align-items: center;
+//         // justify-content: flex-start;
+
+//         .votes {
+//             // margin-right: 2.795rem;
+//             // display: flex;
+//             // flex-direction: column;
+//             // position: relative;
+
+//             &__icon__up {
+//                 cursor: pointer;
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0.5em;
+//                 color: $black;
+//             }
+
+//             &__icon__down {
+//                 cursor: pointer;
+//                 position: absolute;
+//                 top: 1.5em;
+//                 left: 0.5em;
+//             }
+//         }
+//     }
+// }

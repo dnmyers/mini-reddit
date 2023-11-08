@@ -1,0 +1,26 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.posts-container {
+    .loading {
+        @include marginX(25em);
+        @include marginY(2em);
+        text-align: center;
+
+        .loading-spinner {
+            padding: 10em;
+        }
+
+        .loading-text {
+            margin-top: em;
+            padding: 2em;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+    }
+
+    .error {
+        @include marginY(2em);
+        text-align: center;
+    }
+}
