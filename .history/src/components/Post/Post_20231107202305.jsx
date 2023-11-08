@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Container, Col, Row } from 'react-grid-system';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faComment } from '@fortawesome/free-solid-svg-icons';
+import { faComment, faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import Skeleton from 'react-loading-skeleton';
 import timeago from 'epoch-timeago';
 import { useDispatch, useSelector } from 'react-redux';
