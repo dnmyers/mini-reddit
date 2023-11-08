@@ -1,0 +1,31 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+@import '../../styles/helpers/placeholders';
+
+.posts-container {
+    .loading {
+        @include marginY(5em);
+        @extend %flex-column-center-center;
+
+        .loading-spinner {
+            color: $primary-color;
+            margin-top: 1em;
+        }
+
+        .loading-text {
+            font-size: 1em;
+            font-weight: 700;
+        }
+    }
+
+    .error {
+
+        @include marginY(2em);
+        text-align: center;
+    }
+
+    .no-matching-posts {
+        @extend %flex-row-center-center;
+        @include marginY(5em);
+    }
+}

@@ -1,0 +1,8 @@
+@import '../../styles/main';
+
+.comments-header {
+    @include paddingY(0.5em);
+    border-top: 1px solid black;
+    text-align: center;
+    border-bottom: 1px solid black;
+}

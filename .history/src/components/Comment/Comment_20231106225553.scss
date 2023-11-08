@@ -1,0 +1,27 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+@import '../../styles/helpers/placeholders';
+
+.comment-container {
+    @include paddingY(0.5em);
+
+    &-votes {
+        @extend %flex-column-align-center;
+
+        &__icon__up {
+            cursor: pointer;
+            color: $black;
+            font-size: 1.5em !important;
+        }
+
+        &__icon__down {
+            cursor: pointer;
+            color: $black;
+        }
+    }
+
+    .comment-footer {
+        @include marginY(0.5em);
+    }
+
+}

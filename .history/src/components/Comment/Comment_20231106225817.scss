@@ -1,0 +1,18 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+@import '../../styles/helpers/placeholders';
+
+.comment-container {
+    @include paddingY(1em);
+
+    .comment {
+        padding-top: 0.275em;
+        font-size: 0.875em;
+    }
+
+
+    .comment-footer {
+        @include marginY(0.5em);
+    }
+
+}

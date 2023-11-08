@@ -1,0 +1,33 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.posts-container {
+    .loading {
+        @include marginY(2em);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .loading-spinner {
+            color: $primary-color;
+            margin-top: 1em;
+        }
+
+        .loading-text {
+            font-size: 1em;
+            font-weight: 700;
+        }
+    }
+
+    .error {
+
+        @include marginY(2em);
+        text-align: center;
+    }
+
+    .no-matching-posts {
+        @extend %center;
+    }
+}

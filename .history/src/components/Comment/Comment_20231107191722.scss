@@ -1,0 +1,40 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+@import '../../styles/helpers/placeholders';
+
+.comment-container {
+    @include paddingY(0.2em);
+
+    .comment {
+        padding-top: 0.785em;
+        font-size: 0.875em;
+        font-family: $secondary-font;
+    }
+
+    .comment-votes {
+        font-size: 0.5em;
+    }
+
+    .comment-footer {
+        @include marginY(0.5em);
+
+        a {
+            text-decoration: none;
+            color: lighten($black, 40%);
+
+            &:hover {
+                color: $tertiary-color;
+            }
+        }
+
+        .comment-author__url {
+            font-size: 0.785em;
+        }
+
+        .comment-daysAgo {
+            font-size: 0.785em;
+            font-weight: 500;
+        }
+    }
+
+}
